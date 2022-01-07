@@ -66,15 +66,15 @@ exports.config = {
             // to run chrome headless the following flags are required
             // (see https://developers.google.com/web/updates/2017/04/headless-chrome)
              args: ['--no-sandbox', '--disable-gpu'],
-            },
+            }
             //
             // Parameter to ignore some or all default flags
             // - if value is true: ignore all DevTools 'default flags' and Puppeteer 'default arguments'
             // - if value is an array: DevTools filters given default arguments
-             'wdio:devtoolsOptions': {
+             //,'wdio:devtoolsOptions': {
             //    ignoreDefaultArgs: true,
             //    ignoreDefaultArgs: ['--disable-sync', '--disable-extensions'],
-             }
+           //  }
     }],
     //
     // ===================
