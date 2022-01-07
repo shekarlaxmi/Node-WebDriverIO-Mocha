@@ -1,7 +1,7 @@
 {
     "name": "webdriverio-tests",
     "version": "0.1.0",
-    "private": true,
+    "private": false,
     "devDependencies": {
         "@wdio/cli": "^7.16.12",
         "@wdio/local-runner": "^7.16.12",
