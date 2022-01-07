@@ -12,7 +12,7 @@ on:
 jobs:
   build:
 
-    runs-on: alpine:latest
+    runs-on: ubuntu:latest
 
     strategy:
       matrix:
@@ -33,5 +33,5 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'    
-    - run: npm ci
-    - run: npm run wdio
+    - run: npm install
+    - run: npm run wdio:local
