@@ -20,6 +20,7 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     
     steps:
+    - uses: actions/setup-chrome@v2
     - name: 'Setup Chrome'                 
     - run: |
          sudo apt --fix-broken install
