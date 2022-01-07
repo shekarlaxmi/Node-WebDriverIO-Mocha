@@ -57,11 +57,24 @@ exports.config = {
         maxInstances: 5,
         //
         browserName: 'chrome',
-        acceptInsecureCerts: true
+        acceptInsecureCerts: true,
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
         // excludeDriverLogs: ['bugreport', 'server'],
+        'goog:chromeOptions': {
+            // to run chrome headless the following flags are required
+            // (see https://developers.google.com/web/updates/2017/04/headless-chrome)
+             args: ['--no-sandbox', '--disable-gpu'],
+            },
+            //
+            // Parameter to ignore some or all default flags
+            // - if value is true: ignore all DevTools 'default flags' and Puppeteer 'default arguments'
+            // - if value is an array: DevTools filters given default arguments
+             'wdio:devtoolsOptions': {
+            //    ignoreDefaultArgs: true,
+            //    ignoreDefaultArgs: ['--disable-sync', '--disable-extensions'],
+             }
     }],
     //
     // ===================
