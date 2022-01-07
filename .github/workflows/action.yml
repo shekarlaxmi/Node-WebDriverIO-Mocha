@@ -19,7 +19,7 @@ jobs:
         node-version: [14.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     steps:
-    - uses: browser-actions/setup-chrome@latest
+    - uses: browser-actions/setup-google-chrome@latest
     - run: chrome --version    
     - run: sudo apt --fix-broken install
     - run: sudo apt-get install libxss1 libappindicator1 libindicator7
@@ -33,4 +33,4 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'    
     - run: npm install
-    - run: npm run wdio:local
+    - run: npm run wdio
